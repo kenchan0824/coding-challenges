@@ -9,7 +9,8 @@ m = 6, n = 6
 
 Output: 3
 
-Explanation: LCS for input Sequences "ABCDGH" and "AEDFHR" is "ADH" of length 3.
+Explanation: 
+LCS for input Sequences "ABCDGH" and "AEDFHR" is "ADH" of length 3.
 
 Example 2:
 
@@ -20,9 +21,10 @@ m = 3, n = 2
 
 Output: 2
 
-Explanation: LCS of "ABC" and "AC" is "AC" of length 2.
+Explanation: 
+LCS of "ABC" and "AC" is "AC" of length 2.
 
-Your Task:
+Your Task:  
 Complete the function lcs() which takes two strings and their lengths respectively as input parameters and returns the length of the longest subsequence present in both of them.
 
 Expected Time Complexity : O(|X| x |Y|)
