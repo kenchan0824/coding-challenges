@@ -4,11 +4,13 @@ Examples:
   
 1. Given A = [2, -2, 3, 0, 4, -7], the function should return 4, as explained on this picture:
 
-> 2, -2, 3, 0, 4, -7  
-> +----+   +-+  
->       +-----------+  
-> +-----------------+  
-  
+```
+  2, -2, 3, 0, 4, -7  
+  +----+   +-+  
+        +-----------+  
+  +-----------------+  
+```  
+
 2. Given A=[0, 0, ..., 0] of length 100,000 the function should return -1.
   
 Write an efficient algorithm for the following assumptions:
