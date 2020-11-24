@@ -19,5 +19,5 @@ if __name__ == '__main__':
     
     start_time = time.time()
     print(solution(A))
-    print("--- %s seconds ---" % (time.time() - start_time))
+    print("--- %.4f seconds ---" % (time.time() - start_time))
     

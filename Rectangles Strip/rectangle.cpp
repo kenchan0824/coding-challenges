@@ -5,7 +5,7 @@ using namespace std;
 
 int solution(vector<int> &A, vector<int> &B) 
 {
-    unordered_map<int, int> C; 
+    unordered_map<int, int> C;      // <length, counts>
     int N = A.size();
     for (int i=0; i<N; i++)
     {
