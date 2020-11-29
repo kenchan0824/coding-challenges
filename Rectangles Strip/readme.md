@@ -31,4 +31,3 @@ Write an efficient algorithm for the following assumptions:
 N is an integer within the range [1..100,000];
 arrays A and B both consist of N integers;
 each element of arrays A, B is an integer within the range [1..1,000,000,000].
-Copyright 2009–2020 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
