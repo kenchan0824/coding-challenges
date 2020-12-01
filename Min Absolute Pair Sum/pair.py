@@ -1,4 +1,4 @@
-def solution(A):
+def greedy(A):
     # write your code in Python 3.6
     A =sorted(A)
     back = 0
@@ -26,7 +26,7 @@ if __name__ == '__main__':
     A = [random.randint(-1000000000, 1000000000) for i in range(0, 100000)]
     
     start = time.time()
-    print(solution(A))
+    print(greedy(A))
     end = time.time()
     print('elapsed %.4f seconds.' % (end - start))
     
