@@ -1,7 +1,7 @@
 import time
 import random
 
-def minMergeCost(A):
+def greedy(A):
 
     cost = 0
     while len(A) > 1: 
@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     start = time.time()
 
-    print(minMergeCost(A))
+    print(greedy(A))
 
     end = time.time()
     print("--- %.4f seconds ---" % (end - start))

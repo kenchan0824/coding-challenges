@@ -1,9 +1,9 @@
 #include <iostream>
-#include <cstring>
-#include <string>
+#include <cstring>      // memset
+#include <string>       // back_inserter
 #include <vector>
-#include <algorithm>
-#include <random>
+#include <algorithm>    // generate_n
+#include <random>       // rand
 #include <chrono>
 using namespace std;
 using namespace std::chrono;
@@ -49,7 +49,6 @@ int tabular(string X, string Y)
 
 int main()
 {
-    memset(mem, -1, sizeof(mem));
 /*
     string X = "ABCBDAB";
     string Y = "BDCABA";
@@ -64,7 +63,8 @@ int main()
     generate_n (back_inserter(Y), n, [] {return static_cast<char> (rand() % 26 + 'A');});
 
     auto start = high_resolution_clock::now();    
-    //cout << recursion(X, Y, m, n) << endl;
+//    memset(mem, -1, sizeof(mem));
+//    cout << recursion(X, Y, m, n) << endl;
     cout << tabular(X, Y) << endl;
     auto end = high_resolution_clock::now();
     printf("elapsed %.4f seconds.", (end - start) * 1e-9);

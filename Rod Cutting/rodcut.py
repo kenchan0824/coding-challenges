@@ -1,18 +1,44 @@
-def rodCut(price, n):
+import random
+import time
+
+def recursion(P, n, mem={}):
 
     if n == 1:
-        return price[0]
+        return P[0]
+    
+    if n in mem: return mem[n]
     
     maxProfit = 0
     for k in range(0, n):
-        profit = price[k] + rodCut(price, n-k-1)
-        if profit > maxProfit:
-            maxProfit = profit
+        remain = n - (k + 1)
+        profit = P[k] + recursion(P, remain, mem)
+        maxProfit = max(maxProfit, profit)
             
+    mem[n] = maxProfit
     return maxProfit
+
+
+def tabular(P, n):
+    
+    table = [0] * (n + 1)
+    
+    for l in range(1, n+1):
+        for k in range(0, l):
+            remain = l - (k + 1)
+            table[l] = max(table[l], P[k] + table[remain])
+
+    return table[n]
 
 
 if __name__ == '__main__':
 
-    price = [1, 5, 8, 9, 10, 17, 17, 20]
-    print(rodCut(price, 4))
+#    P = [1, 5, 8, 9]
+#    n = 4
+    n = 1000
+    P = sorted([random.randint(1, 10000) for i in range(n)])
+    
+    start = time.time()
+#    print(recursion(P, n, {}))
+    print(tabular(P, n))
+    end = time.time()
+    print('elapsed %.4f seconds.' % (end - start))

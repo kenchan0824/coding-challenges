@@ -1,30 +1,58 @@
 #include <iostream>
-#include <cstring>
-#include <climits>
+#include <climits>      // INT_MAX
+#include <algorithm>
+#include <chrono>
 using namespace std;
+using namespace std::chrono;
 
-int dp[100][100];
+int mem[10001];
 
-int minCoins(int coins[], int m, int n)
+int recursion(int coins[], int n, int value)
 {
-    if (n == 0) return 0;
-    if (n < 0) return INT_MAX-1;
-    if (m == 0 && n > 0) return INT_MAX-1;
+    if (value == 0) return 0;
 
-    if (dp[m][n] != -1) return dp[m][n];
+    if (mem[value] != INT_MAX - 1) return mem[value];
 
-    int left = minCoins(coins, m-1, n); 
-    int right = 1 + minCoins(coins, m, n - coins[m-1]);
-    dp[m][n] = min(left, right);
-    return dp[m][n];
+    int result = INT_MAX - 1;
+    for (int i=0; i<n; i++)
+    {
+        if (coins[1] > value) continue;
+        int remain = value - coins[i];
+        result = min(result, 1 + recursion(coins, n, remain));
+    }
+
+    mem[value] = result;
+    return mem[value];
+}
+
+int tabular(int coins[], int n, int value)
+{
+    int table[value + 1];
+    fill_n(table, value + 1, INT_MAX -1);
+    table[0] = 0;
+
+    for (int v=1; v<=value; v++)
+    {
+        for (int i=0; i<n; i++)
+        {
+            if (coins[i] > v) continue;
+            int remain = v - coins[i]; 
+            table[v] = min(table[v], 1 + table[remain]);
+        }
+    }
+    return table[value] != INT_MAX -1 ? table[value] : -1;
 }
 
 int main() 
 {
-    memset(dp, -1, sizeof(dp));
-    int coins[] = {9, 6, 5, 1};
-    int n = 11;
-    int m = sizeof(coins) / sizeof(coins[0]);
+    int coins[] = {1, 5, 6, 9};
+    int value = 10000;
+    int n = sizeof(coins) / sizeof(coins[0]);
 
-    cout << minCoins(coins, m, n) << endl;
+    auto start = high_resolution_clock::now();
+    //fill_n(mem, 10001, INT_MAX -1);
+    //cout << recursion(coins, n, value) << endl;
+    cout << tabular(coins, n, value) << endl;
+    auto end = high_resolution_clock::now();
+    printf("elapseed %.4f seconds.", (end- start) * 1e-9);
 }

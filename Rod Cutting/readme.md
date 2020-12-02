@@ -1,4 +1,4 @@
-Given a rod of length n and an array of prices A[], where A[i] is the price of a rod of length i.
+Given a rod of length n and an array of prices P[], where P[i] is the price of a rod of length i.
 
 The goal is to determine the maximum revenue, obtainable by cutting up the rod and selling the pieces.
 
