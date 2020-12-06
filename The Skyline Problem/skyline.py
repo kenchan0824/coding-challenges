@@ -21,14 +21,15 @@ def eventscan(buildings):
                 max_height = -h
         else:                   # outgoing event
             heights.pop(bisect_left(heights, -h))
-            curr_height = -heights.copy().pop() if heights else 0
+            curr_height = -heights[0] if heights else 0
             if curr_height < max_height:        # handle corner cases
                 max_height = curr_height
                 skyline.append([t, max_height])
 
     return skyline
 
-
+t, h = events[1]
+heights[0]
 if __name__ == '__main__':
     
     buildings = [[2,9,10],[3,7,15],[5,12,12],[15,20,10],[19,24,8]]

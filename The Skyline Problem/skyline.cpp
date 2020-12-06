@@ -19,7 +19,7 @@ vector<vector<int>> eventscan(const vector<vector<int>> &buildings)
     int max_height = 0, curr_height = 0;
     
     for(auto e: events) {
-        if(enable_if.second < 0)                                // incomming
+        if(e.second < 0)                                        // incomming
             heights.insert(-1 * e.second);                      // add height stack
         else                                                    // outgoing
             heights.erase(heights.find(e.second));              // remove height stack
