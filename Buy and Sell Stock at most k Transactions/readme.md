@@ -1,4 +1,4 @@
-Buy and Sell Stock at most k Times
+Buy and Sell Stock at most k Transactions
 ===
 
 
