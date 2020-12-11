@@ -1,8 +1,9 @@
 from itertools import combinations
+from functools import lru_cache
 
-def solve(nums, size, dp = {}):
+@lru_cache(maxsize=None)
+def solve(nums, size):
     if not nums: return 0
-    if nums in dp: return dp[nums]
     
     ans = float('inf')
     for combo in combinations(set(nums), size):
@@ -11,7 +12,6 @@ def solve(nums, size, dp = {}):
             left.remove(x)
 
         ans = min(ans, max(combo) - min(combo) + solve(tuple(left), size))
-        dp[nums] = ans
 
     return ans
 
@@ -35,11 +35,12 @@ if __name__ == "__main__":
     k = 4
     minimumIncompatibility(nums, k)
     
+    nums = [7,3,16,15,1,13,1,2,14,5,3,10,6,2,7,15]
+    k = 8
+    minimumIncompatibility(nums, k)
+
     nums = [6,8,5,16,8,12,11,7,13,16,15,14,7,9,1,10]
     k = 4
     minimumIncompatibility(nums, k)
     
-    nums = [7,3,16,15,1,13,1,2,14,5,3,10,6,2,7,15]
-    k = 8
-    minimumIncompatibility(nums, k)
     
