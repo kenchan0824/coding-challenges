@@ -1,4 +1,4 @@
-from bisect import bisect_left, insort
+from bisect import insort
 
 def eventscan(buildings):
 
@@ -20,7 +20,7 @@ def eventscan(buildings):
                 skyline.append([t, -h])
                 max_height = -h
         else:                                       # outgoing event
-            heights.pop(bisect_left(heights, -h))
+            heights.remove(-h)
             curr_height = -heights[0] if heights else 0
             if curr_height < max_height:            # handle corner cases
                 max_height = curr_height
@@ -32,7 +32,10 @@ def eventscan(buildings):
 if __name__ == '__main__':
     
     buildings = [[2,9,10],[3,7,15],[5,12,12],[15,20,10],[19,24,8]]
+    eventscan(buildings)
 #    skyline = [[2,10],[3,15],[7,12],[12,0],[15,10],[20,8],[24,0]]
-#    buildings = [[0,2,3],[2,5,3]]  # corner case
+
+    buildings = [[0,2,3],[2,5,3]]  # corner case
+    eventscan(buildings)
 #    skyline = [[0,3], [5,0]]    
-    print(eventscan(buildings))
+    
