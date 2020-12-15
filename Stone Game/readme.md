@@ -37,4 +37,4 @@ This demonstrated that taking the first 5 was a winning move for Alex, so we ret
 
 
 
-#minimax #dynamic-programming
+#minimax 	#dynamic-programming 	#O(n^2)

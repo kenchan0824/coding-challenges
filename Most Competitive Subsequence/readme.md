@@ -38,4 +38,5 @@ Output: [2,3,3,4]
 
 
 
-#stack
+#stack 	#O(n)
+

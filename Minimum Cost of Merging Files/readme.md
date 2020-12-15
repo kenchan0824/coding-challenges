@@ -35,4 +35,4 @@ The total cost to merge all the files is 92 (13+27+52).
 
 
 
-#greedy #heap
+#greedy 	#heap

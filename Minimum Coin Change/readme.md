@@ -38,3 +38,7 @@ Complete the function `minCoins()` which takes `V`, `n` and array coins as input
 
 - `1 ≤ V x n ≤ 106`
 - All the elements of array are distinct
+
+
+
+#dynamic-programming 	#O(k.n)

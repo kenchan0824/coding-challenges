@@ -44,3 +44,7 @@ Output: 2
 - `1 <= arr.length <= 5 * 1e4`
 - `0 <= arr[i] < 5 * 1e4`
 - The largest element will be unique.
+
+
+
+#tree 	#breadth-first-search 	#O(n)

@@ -60,4 +60,4 @@ It is not possible to produce 4 such ropes.
 
 
 
-#greedy #O(N)
+#greedy 	#O(n)

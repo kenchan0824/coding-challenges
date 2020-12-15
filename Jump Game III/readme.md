@@ -1,5 +1,4 @@
 Jump Game III
-
 ===
 
 
@@ -50,3 +49,8 @@ Explanation: There is no way to reach at index 1 with value 0.
 - `1 <= arr.length <= 5 * 1e4`
 - `0 <= arr[i] < arr.length`
 - `0 <= start < arr.length`
+
+
+
+#tree 	#breadth-first-search 	#O(n)
+

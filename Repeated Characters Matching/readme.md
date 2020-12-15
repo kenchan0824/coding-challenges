@@ -45,3 +45,7 @@ Output: true
 - `1 <= N <= 2000`
 - `s` contains only numbers between `[1-9]` and lowercase English letters.
 - `p` contains only `'+'`, `'$'`,`'*'` and `'{N}'`.
+
+
+
+#string 	#dynamic-programming 	#O(k.n^2)

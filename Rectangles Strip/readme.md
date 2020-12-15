@@ -61,4 +61,4 @@ We can choose the 0th, 2nd and 4th rectangles to obtain a strip of height 4:
 
 
 
-#hash-table
+#hash-table 	#O(n)

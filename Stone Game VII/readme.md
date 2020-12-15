@@ -46,4 +46,4 @@ Output: 122
 
 
 
-#minimax #dynamic-programming #prefix-sum
+#minimax 	#dynamic-programming 	#prefix-sum 	#O(n^2)
