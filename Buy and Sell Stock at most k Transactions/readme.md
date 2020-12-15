@@ -50,3 +50,7 @@ Buy on day 2 (price = 2) and sell on day 3 (price = 6), profit = 6-2 = 4. Then b
 - `0 <= k <= 1e9`
 - `0 <= prices.length <= 1000`
 - `0 <= prices[i] <= 1000`
+
+
+
+#dynamic-programming 	#O(k.n)

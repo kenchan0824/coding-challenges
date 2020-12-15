@@ -37,7 +37,9 @@ The total profit is ((8 - 1) - 2) + ((9 - 4) - 2) = 8.
 **Note:**
 
 - `0 < prices.length <= 50000`.
-
 - `0 < prices[i] < 50000`.
-
 - `0 <= fee < 50000`.
+
+
+
+#dynamic-programming 	#O(n)

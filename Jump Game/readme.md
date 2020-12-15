@@ -35,3 +35,7 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum jump 
 
 - `1 <= nums.length <= 3 * 1e4`
 - `0 <= nums[i][j] <= 1e5`
+
+
+
+#line-sweep 	#O(n)

@@ -36,3 +36,7 @@ Output: 2
 
 - `1 <= nums.length <= 3 * 1e4`
 - `0 <= nums[i] <= 1e5`
+
+
+
+#line-sweep 	#O(n)
