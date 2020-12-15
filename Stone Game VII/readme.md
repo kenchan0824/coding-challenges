@@ -46,4 +46,4 @@ Output: 122
 
 
 
-#minimax #dynamic-programming
+#minimax #dynamic-programming #prefix-sum

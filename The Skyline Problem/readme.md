@@ -1,6 +1,8 @@
 The Skyline Problem
 ===
 
+
+
 A city's **skyline** is the outer contour of the silhouette formed by all the buildings in that city when viewed from a distance. Given the locations and heights of all the buildings, return the **skyline** formed by these buildings collectively.
 
 The geometric information of each building is given in the array `buildings` where `buildings[i] = [left[i], right[i], height[i]]`:
@@ -73,3 +75,6 @@ buildings = [[0,2,3],[2,5,3]]
 - `1 <= heighti <= 231 - 1`
 - `buildings` is sorted by `left[i]` in non-decreasing order.
 
+
+
+#event-scan #heap

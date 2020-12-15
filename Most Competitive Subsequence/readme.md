@@ -35,3 +35,7 @@ Output: [2,3,3,4]
 - `1 <= nums.length <= 1e5`
 - `0 <= nums[i] <= 1e9`
 - `1 <= k <= nums.length`
+
+
+
+#stack
