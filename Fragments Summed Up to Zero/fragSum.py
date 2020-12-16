@@ -1,24 +1,25 @@
-def solution(A):
-    N = len(A)
-    count = 0
-    
-    for i in range(0, N):
-        cache = {}
-        for j in range(i, N):
-            if j == i:
-                cache[j] = A[j]
-                fragSum = A[j]
-            else:
-                fragSum = A[j] + cache[j-1]
-                cache[j] = fragSum
+from collections import defaultdict
 
-            if fragSum == 0:
-                count += 1
+def solution(A):
+    table = defaultdict(int)
+    table[0] = 1    
+    count, psum = 0, 0
+    for a in A:
+        psum += a
+        count += table[psum]
+        table[psum] += 1
                 
     return count
-    
 
 if __name__ == '__main__':
     
-    A = [2, -2, 3, 0, 4, -7]
+    from random import randint
+    import time
+    
+#    A = [2, -2, 3, 0, 4, -7]
+    A = [randint(-100, 100) for _ in range(100000)]
+    start = time.time()
     print(solution(A))
+    end = time.time()
+    print("elapsed %.4f seconds" % (end - start))
+    

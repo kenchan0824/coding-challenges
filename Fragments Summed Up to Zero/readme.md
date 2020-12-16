@@ -36,4 +36,4 @@ Output: -1.
 
 
 
-#prefix-sum 	#O(n)
+#prefix-sum 	#hash-table 	#O(n)
