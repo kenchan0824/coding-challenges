@@ -48,7 +48,7 @@ int solution_fast(vector<int> A)
 int main() 
 {
     //vector<int> A = {14, 25, 5, 8};
-    vector<int> A(10000);
+    vector<int> A(100000);
     generate(A.begin(), A.end(), [] {return rand() % 100;});
 
     auto start = high_resolution_clock::now();
