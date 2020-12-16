@@ -3,7 +3,7 @@ Minimum Coin Change
 
 
 
-Given a value `V` and array `coins[]` of size `n`, the task is to make the change for `V` cents, given that you have an infinite supply of each of `coins{coins[1], coins[2], ..., coins[n]}` valued coins. Find the **minimum number of coins to make the change**. If not possible to make change then output -1
+Given a value `V` and array `coins[]` of size `n`, the task is to make the change for `V` cents, given that you have an infinite supply of each of `coins{coins[1], coins[2], ..., coins[n]}` valued coins. Find the **minimum number of coins to make the change**. If not possible to make change then output `-1`.
 
 
 
@@ -36,7 +36,7 @@ Complete the function `minCoins()` which takes `V`, `n` and array coins as input
 
 **Constraints:**
 
-- `1 ≤ V x n ≤ 106`
+- `1 ≤ V x n ≤ 1e6`
 - All the elements of array are distinct
 
 

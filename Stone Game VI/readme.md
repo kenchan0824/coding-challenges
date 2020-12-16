@@ -65,4 +65,4 @@ Bob wins.
 
 
 
-#greedy 	#O(n.logn)
+#greedy 	#O(n.log_n)

@@ -70,11 +70,11 @@ buildings = [[0,2,3],[2,5,3]]
 
 ### Constraints:
 
-- `1 <= buildings.length <= 104`
+- `1 <= buildings.length <= 1e4`
 - `0 <= lefti < righti <= 231 - 1`
 - `1 <= heighti <= 231 - 1`
 - `buildings` is sorted by `left[i]` in non-decreasing order.
 
 
 
-#line-sweep 	#heap
+#line-sweep 	#heap 	#O(n.log_n)

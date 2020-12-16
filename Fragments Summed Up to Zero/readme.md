@@ -1,3 +1,8 @@
+Fragments Summed Up to Zero
+===
+
+
+
 Write a function solution that, given an array `A` consisting of `N` integers, returns the number of fragments of `A` whose sum equals `0` (this is, pairs `(P, Q)` such that ` P <= Q ` and the sum `A[P] + A[P+1] + ... + A[Q]` is `0`). The function should return `-1` if this number exceeds `1,000,000,000`.
 
 
