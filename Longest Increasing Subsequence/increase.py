@@ -1,29 +1,12 @@
-def binary_search(L, longest, value):
+from bisect import bisect_left
 
-    start = 0
-    end = longest - 1
-    while start <= end:
-        mid = int((start + end) / 2)
-        if L[mid] >= value:
-            end = mid - 1
-        else:            
-            start = mid + 1
-    
-    return start
-
-    
 def solution(A):
     
-    n = len(A)
-    L = [None] * n
-
-    L[0] = A[0]
-    longest = 1
-
-    for i in range(1, n):
-        value = A[i]
-        idx = binary_search(L, longest, value)
-        L[idx] = value
+    L = [None] * len(A)
+    longest = 0
+    for a in A:
+        idx = bisect_left(L, a, 0, longest)
+        L[idx] = a
         if idx == longest:
             longest += 1
             

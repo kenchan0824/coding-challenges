@@ -51,4 +51,4 @@ Output: 1
 
 
 
-#dynamic-programming 	#binary-search 	#O(n.logn)
+#dynamic-programming 	#binary-search 	#O(n.log_n)
