@@ -41,4 +41,4 @@ Output the total unit of water trapped in between the blocks.
 
 
 
-#line-sweep 	#hash-table 	#O(n)
+#line-sweep 	#stack 	#two-pointers 	#O(n)
