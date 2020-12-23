@@ -40,4 +40,4 @@ Output: [24,15,13,15,21]
 
 
 
-#prefix-sum
+#prefix-sum 	#O(n)
